@@ -13,7 +13,7 @@ const forecast = (latitude,longitude, callback) => {
         else {
             currenttemp = body.currently.temperature
             precipprob = body.currently.precipProbability        
-            callback(undefined,body.daily.data[0].summary+" It is currently " + currenttemp + "deg.  There is a "+ precipprob + "% chance of rain")
+            callback(undefined,body.daily.data[0].summary+" It is currently " + currenttemp + "deg.  The high today is "+body.daily.data[0].temperatureHigh+' with a low of '+body.daily.data[0].temperatureLow+". There is a "+ precipprob + "% chance of rain")
         }
     })
 }
